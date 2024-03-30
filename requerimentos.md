@@ -1,0 +1,104 @@
+# Creacion de requerimentos para bases de datos sql
+
+## Entidades
+
+### jugadores
+
+- id_jugador **(PK)**
+- nombre
+- apellido_paterno
+- apellido_materno
+- edad
+- estatura
+- foto
+- curp
+- posicion
+- dorsal
+- pierna_dominante
+- id_contacto **(FK)**
+- id_equipo **(FK)**
+
+### contacto
+
+- id_contacto **(PK)**
+- numero
+- numero_secundario
+- redsocial
+- correo
+
+### equipos
+
+- id_equipo **(PK)**
+- nombre
+- delegado
+- foto
+- posicion_tabla
+- id_contacto **(FK)**
+- id_liga **(FK)**
+
+### ligas
+
+- id_liga **(PK)**
+- nombre
+- numero_equipos
+
+### juegos
+
+- id_juego
+- local (id_equipo)
+- visitante (id_equipo)
+- fecha
+- hora_encuentro
+- nombre_campo_juego
+- estatus
+- id_estadistica_juego **(FK)**
+- id_liga **(FK)**
+
+### estadisticas_juego
+
+- id_estadistica_juego **(Pk)**
+- disparos_ap (tiros a puerta)
+- disparos_f (tiros fuera)
+- gol_local
+- gol_visita
+- faltas_local
+- faltas_visita
+- cambios_local
+- cambios_visita
+
+### faltasXjugador
+
+- id_faltaxjugador **(PK)**
+- amonestacion
+- expulsion
+- descripcion
+- id_jugador **(FK)**
+- id_estadistica_juego **(FK)**
+
+### estadisticas_jugadores
+
+- id_e_jugador **(PK)**
+- mano_a_mano_ganado
+- mano_a_mano_perdido
+- intercepcion
+- id_jugador **(FK)**
+- id_pases **(FK)**
+- id_tiro **(FK)**
+- id_juego **(FK)**
+
+### pases
+
+- id_pase **(PK)**
+- acertado **(boolean)**
+- balon_parado **(boolean)**
+- golpeo (lugar con el que se golpea el balon)
+- id_jugador **(FK)**
+
+### tiros
+
+- id_tiro **(PK)**
+- gol **(boolean)**
+- acertado **(boolean)**
+- balon_parado **(boolean)**
+- golpeo (lugar con el que se golpea el balon)
+- id_jugador **(FK)**
