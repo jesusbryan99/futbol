@@ -40,6 +40,7 @@
 
 - id_liga **(PK)**
 - nombre
+- descripcion
 - numero_equipos
 
 ### juegos
@@ -102,3 +103,20 @@
 - balon_parado **(boolean)**
 - golpeo (lugar con el que se golpea el balon)
 - id_jugador **(FK)**
+
+## Relaciones
+
+- Un jugador tiene contactos _1 a M_
+- Un jugador tiene un equipo _M a 1_
+- Un equipo tiene contactos _1 a M_
+- Una liga tiene varios equipos _1 a M_;
+
+  (En ligas amateur varios equipos pueden estar en varias ligas, pero no son los mismos jugadores, cada liga se cuenta por separado ya que no se concidera oficial, ni restringido que un jugador que juega en una liga en "x" equipo no pueda jugar en "y" equipo de esta misma liga).
+
+- Varios juegos tienen varias estadisticas _M a M_
+- Las ligas tienes varios juegos _M a M_
+- Un juego tiene varias faltas _1 a M_
+- Un jugador puede hacer varias faltas _1 a M_
+- Un jugador tiene estadisticas _1 a M_
+- un jugador hace pases _1 a M_
+- un jugador hace tiros _1 a M_
