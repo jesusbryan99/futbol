@@ -9,6 +9,7 @@
 - apellido_paterno
 - apellido_materno
 - edad
+- fecha_nacimiento
 - estatura
 - foto
 - curp
