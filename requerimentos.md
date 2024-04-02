@@ -93,6 +93,7 @@
 
 - id_pase **(PK)**
 - acertado **(boolean)**
+- asistencia **(boolean)**
 - balon_parado **(boolean)**
 - golpeo (lugar con el que se golpea el balon)
 - id_jugador **(FK)**
@@ -122,3 +123,4 @@
 - Un jugador tiene estadisticas _1 a M_
 - un jugador hace pases _1 a M_
 - un jugador hace tiros _1 a M_
+- un juego tiene varias estadisticas
