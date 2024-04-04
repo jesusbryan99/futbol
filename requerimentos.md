@@ -32,7 +32,7 @@
 
 - id_equipo **(PK)**
 - nombre
-- delegado
+- id_usuario
 - foto
 - posicion_tabla
 - id_contacto **(FK)**
@@ -107,6 +107,21 @@
 - golpeo (lugar con el que se golpea el balon)
 - id_jugador **(FK)**
 
+### usuarios
+
+- id_usuario
+- nombre
+- apellido_paterno
+- apellido_materno
+- correo
+- password
+- telefono
+- fecha_nacimiento
+- edad
+- genero
+- curp
+- rol
+
 ## Relaciones
 
 - Un jugador tiene contactos _1 a M_
@@ -124,3 +139,4 @@
 - un jugador hace pases _1 a M_
 - un jugador hace tiros _1 a M_
 - un juego tiene varias estadisticas
+- un delegado tiene un equipo
