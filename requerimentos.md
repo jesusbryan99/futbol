@@ -32,9 +32,9 @@
 
 - id_equipo **(PK)**
 - nombre
-- id_usuario
 - foto
 - posicion_tabla
+- id_usuario **(FK)**
 - id_contacto **(FK)**
 - id_liga **(FK)**
 
@@ -54,6 +54,7 @@
 - hora_encuentro
 - nombre_campo_juego
 - estatus
+- jornada_juego
 - id_estadistica_juego **(FK)**
 - id_liga **(FK)**
 
@@ -139,4 +140,4 @@
 - un jugador hace pases _1 a M_
 - un jugador hace tiros _1 a M_
 - un juego tiene varias estadisticas
-- un delegado tiene un equipo
+- un usuario puede tener uno o mas equipo
